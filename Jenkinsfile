@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build docker image') {
             steps {  
-                sh 'pwd'  
+                sh 'uname -a'  
             }
         }
         // stage('Run docker container') {
