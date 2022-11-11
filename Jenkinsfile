@@ -15,6 +15,8 @@ pipeline {
         }
         stage('Run docker container') {
             steps {
+                sh 'cd /home/app/'
+                sh 'git clone https://github.com/neupaneprashant22/dockerized-Movierecommendation.git'
                 sh 'docker-compose up'
             }
         }
