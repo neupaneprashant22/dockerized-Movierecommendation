@@ -9,17 +9,13 @@ pipeline {
         }
         stage('Build docker image') {
             steps {  
-                // sh 'cd /home/app/'
-                sh 'pwd'
-                sh 'git clone https://github.com/neupaneprashant22/dockerized-Movierecommendation.git'
-                sh 'cd dockerized-Movierecommendation'
-                sh 'docker-compose build'  
+               sh 'echo Build docker image ' 
             }
         }
-        stage('Run docker container') {
-            steps {
-                sh 'docker-compose up'
-            }
-        }
+        // stage('Run docker container') {
+        //     steps {
+        //         sh 'docker-compose up'
+        //     }
+        // }
     }
 }
