@@ -3,20 +3,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
+        stage('SCM Checkout') {
+            steps{
+            git 'https://github.com/ravdy/nodejs-demo.git'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+        stage('Build docker image') {
+            steps {  
+                sh 'docker-compose build'  
             }
         }
-        stage('Deploy') {
+        }
+        stage('Run docker container') {
             steps {
-                echo 'Deploying....'
+                sh 'docker-compose up'
             }
         }
     }
-}
