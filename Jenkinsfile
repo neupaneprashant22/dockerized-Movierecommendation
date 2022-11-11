@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Build docker image') {
             steps {  
-               sh 'echo Build docker image ' 
+               sh 'echo Build docker image '
+               sh 'pwd' 
             }
         }
         // stage('Run docker container') {
