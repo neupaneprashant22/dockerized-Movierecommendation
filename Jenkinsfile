@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Build docker image') {
             steps {  
+                sh 'cd /home/app/'
                 sh 'docker-compose build'  
             }
         }
