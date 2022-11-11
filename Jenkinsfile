@@ -10,6 +10,7 @@ pipeline {
         stage('Build docker image') {
             steps {  
                 // sh 'cd /home/app/'
+                sh 'pwd'
                 sh 'git clone https://github.com/neupaneprashant22/dockerized-Movierecommendation.git'
                 sh 'docker-compose build'  
             }
