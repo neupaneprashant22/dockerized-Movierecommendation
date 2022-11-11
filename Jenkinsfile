@@ -9,13 +9,13 @@ pipeline {
         }
         stage('Build docker image') {
             steps {  
-                sh 'docker-compose build'  
+                sh 'pwd'  
             }
         }
-        stage('Run docker container') {
-            steps {
-                sh 'docker-compose up'
-            }
-        }
+        // stage('Run docker container') {
+        //     steps {
+        //         sh 'docker-compose up'
+        //     }
+        // }
     }
 }
