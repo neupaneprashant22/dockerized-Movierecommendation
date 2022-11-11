@@ -14,10 +14,5 @@ pipeline {
                sh 'docker-compose build -t movie-recommendation'
             }
         }
-        stage('Run docker container') {
-            steps {
-                sh 'docker-compose up'
-            }
-        }
     }
 }
