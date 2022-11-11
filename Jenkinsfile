@@ -12,10 +12,10 @@ pipeline {
                 sh 'docker-compose build'  
             }
         }
-        }
         stage('Run docker container') {
             steps {
                 sh 'docker-compose up'
             }
         }
     }
+}
