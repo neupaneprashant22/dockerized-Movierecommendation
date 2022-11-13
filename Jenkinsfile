@@ -11,7 +11,7 @@ pipeline {
             steps {  
                sh 'echo Build docker image '
                sh 'pwd' 
-               sh ' docker-compose build -t movie-recommendation'
+               sh ' docker-compose build '
             }
         }
     }
