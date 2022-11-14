@@ -11,7 +11,7 @@ pipeline {
             steps {  
                sh 'echo Build docker image '
                sh 'pwd' 
-               sh ' docker-compose --version '
+               sh ' docker-compose build '
             }
         }
     }
