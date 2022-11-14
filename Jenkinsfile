@@ -19,7 +19,7 @@ pipeline {
     failure {
         mail to: 'neupaneprashant22@gmail.com,nisheshthakuri01@gmail.com',
              subject: "Failed Pipeline:",
-             body: "Something is wrong with pipeline"
+             body: "Something is wrong in pipeline"
     }
     success {
         mail to: 'neupaneprashant22@gmail.com',
