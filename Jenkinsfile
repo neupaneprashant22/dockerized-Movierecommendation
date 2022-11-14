@@ -15,4 +15,16 @@ pipeline {
             }
         }
     }
+    post {
+    failure {
+        mail to: 'neupaneprashant22@gmail.com',
+             subject: "Failed Pipeline:",
+             body: "Something is wrong with pipeline"
+    }
+    success {
+        mail to: 'neupaneprashant22@gmail.com',
+             subject: "Pipeline Build:",
+             body: "Pipeline is build"
+    }
+}
 }
