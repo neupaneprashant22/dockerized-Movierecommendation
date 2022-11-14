@@ -17,7 +17,7 @@ pipeline {
     }
     post {
     failure {
-        mail to: 'neupaneprashant22@gmail.com,nisheshthakuri01@gmail.com',
+        mail to: 'neupaneprashant22@gmail.com,nisheshthakuri01@gmail.com,prashant.neupane@deerwalk.edu.np',
              subject: "Failed Pipeline:",
              body: "Something is wrong in pipeline"
     }
